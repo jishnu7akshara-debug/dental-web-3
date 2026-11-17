@@ -1,0 +1,19 @@
+# Netlify and Cloudflare Pages read this file. For other hosts, set the same headers in the server config.
+# The sha256 in script-src is the inline script in index.html <head>. If you edit that script, recompute it
+# (or the browser will block it and animations will simply be skipped; content stays visible).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-NEDIBYCWpHP1CEUE2W869FZ0bUdvtpP7vLyRCp6Su2w='; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https:; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+
+/images/*
+  Cache-Control: public, max-age=2592000
+
+/*.css
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/*.js
+  Cache-Control: public, max-age=86400, must-revalidate
