@@ -23,7 +23,7 @@
   if (year) year.textContent = String(new Date().getFullYear());
 
   /* ---------- Reveal on scroll ---------- */
-  var targets = document.querySelectorAll('.reveal, .fade, .wipe, .rule-in, .wordmark');
+  var targets = document.querySelectorAll('.reveal, .fade, .wipe, .rule-in');
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

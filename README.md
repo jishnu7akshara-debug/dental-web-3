@@ -70,3 +70,8 @@ Then put the result in the `sha256-...` part of `_headers`. If you forget, nothi
 - Added contact links (tap to call, open in Maps), favicons, a web manifest, a 404 page, and caching headers.
 - Fixed a stray "Arka Dental Studio" comment in `styles.css`.
 - The visual design and animations are unchanged.
+
+## Update (17 Nov 2026, second pass)
+
+- Removed the spinning hero badge, the "12 years" hero tag and the big footer wordmark. Marquee separators are now small dots.
+- `styles.css` and `script.js` are linked with `?v=2` so returning visitors get the new files despite the one-day cache. Bump the number whenever you change either file.
